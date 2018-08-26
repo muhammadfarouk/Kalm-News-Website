@@ -1,0 +1,73 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>إتصل بنا <small>جميع الرسائل المرسلة من خلال صفحة الإتصال مرتبة بالأحدث</small></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <br />
+                <div class="x_content">
+                    <div class="x_content" ng-show="List.length!=0">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr style="background-color:#007bb7;color:white">
+                                    <td>الإسم</td>
+                                    <td>البريد الإلكترونى</td>
+                                    <td>الموقع الإلكترونى</td>
+                                    <td>الموضوع</td>
+                                    <td>الرسالة</td>
+                                    <td>التاريخ</td>
+                                    <td>الخيارات</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in List">
+                                    <td>{{x.Name}}</td>
+                                    <td>{{x.Email}}</td>
+                                    <td>{{x.Website}}</td>
+                                    <td>{{x.Subject}}</td>
+                                    <td>{{x.Message}}</td>
+                                    <td>{{x.Cdate}}</td>
+                                    <td style="text-align:center">
+                                        <a href="" ng-click="Delete(x.ID)"><span class="label label-danger">مسح</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <div class="col-md-12" style="text-align:center">
+                            <uib-pagination ng-model="CurrentPage"
+                                            ng-change="Search(CurrentPage)"
+                                            items-per-page="PageSize"
+                                            total-items="totalItems"
+                                            max-size="5"
+                                            class="pagination"
+                                            next-text="<"
+                                            previous-text=">"
+                                            last-text="<<"
+                                            first-text=">>"
+                                            force-ellipses="true"
+                                            boundary-links="true"
+                                            rotate="false">
+                            </uib-pagination>
+                            <br />
+                            <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">صفحة {{CurrentPage}} من {{totalPages}} صفحة</div>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="x_content" ng-show="List.length==0">
+                        <br />
+                        <div class="alert alert-info alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <strong>عفوا !</strong> لا يوجد اي رسائل.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>

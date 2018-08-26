@@ -1,0 +1,76 @@
+﻿<!-- *** START PAGE MAIN CONTENT *** -->
+<main class="page_main_wrapper">
+    <!-- START PAGE HEADER -->
+    <section class="inner-head hidden-xs" style="background-image: url(Template/Contact.jpg);height:258px">
+    </section>
+    <!-- END OF /. PAGE HEADER -->
+    <div class="team about-content">
+        <div class="container">
+            <div class="row row-m">
+                <div class="col-sm-8 main-content col-p">
+                    <div class="theiaStickySidebar">
+                        <!-- START CONTACT FORM AREA -->
+                        <div class="contact_form_inner">
+                            <div class="panel_inner">
+                                <div class="panel_header">
+                                    <h4><strong>للإستفسارات</strong> الرجاء إرسالة رسالة إلى القسم المختص </h4>
+                                </div>
+                                <div class="panel_body">
+                                    <form class="comment-form" name="FormMain" accessible-form>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="name">الإسم <span ng-show="FormMain.Name.$error.required">*</span></label>
+                                                    <input type="text" class="form-control" name="Name" required ng-model="Object.Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="email">الموضوع</label>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" ng-model="Object.Subject">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label for="email">البريد الألكترونى</label>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" ng-model="Object.Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="name">الموقع الإلكترونى</label>
+                                                    <input type="text" class="form-control" ng-model="Object.Website">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">الرسالة <span ng-show="FormMain.Message.$error.required">*</span></label>
+                                            <textarea class="form-control" id="message" name="Message" required rows="5" ng-model="Object.Message"></textarea>
+                                        </div>
+                                        <a href="" ng-click="Add()" class="btn btn-news"> إرسال</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END OF CONTACT FORM AREA -->
+                    </div>
+                </div>
+                <div class="col-sm-4 leftSidebar col-p">
+                    <div class="theiaStickySidebar">
+                        <!-- START CONTACT INFO -->
+                        <div class="panel_inner">
+                            <div class="panel_header">
+                                <h4><strong>بيانات الإتصال</strong></h4>
+                            </div>
+                            <div class="panel_body">
+                                <address> <strong>البريد الإلكترونى</strong><br> <a href="mailto:kalmnews@yahoo.com">kalmnews@yahoo.com</a> </address>
+                            </div>
+                        </div>
+                        <!-- END OF /. CONTACT INFO -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

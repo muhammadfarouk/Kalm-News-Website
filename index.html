@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>قلم نيوز</title>
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="Template/assets/images/ico/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="Template/assets/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="Template/assets/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="Template/assets/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="Template/assets/images/ico/apple-touch-icon-144-precomposed.png">
+
+    <!-- jquery ui css -->
+    <link href="Template/assets/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap rtl -->
+    <link href="Template/assets/css/bootstrap.rtl.full.min.css" rel="stylesheet" type="text/css" />
+    <!--Animate css-->
+    <link href="Template/assets/css/animate.min.css" rel="stylesheet" type="text/css" />
+    <!-- Navigation css-->
+    <link href="Template/assets/bootsnav/css/bootsnav.css" rel="stylesheet" type="text/css" />
+    <!-- youtube css -->
+    <link href="Template/assets/css/RYPP.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <link href="Template/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- themify-icons -->
+    <link href="Template/assets/themify-icons/themify-icons.css" rel="stylesheet" type="text/css" />
+    <!-- weather-icons -->
+    <link href="Template/assets/weather-icons/css/weather-icons.min.css" rel="stylesheet" type="text/css" />
+    <!-- flat icon -->
+    <link href="Template/assets/css/flaticon.css" rel="stylesheet" type="text/css" />
+    <!-- Important Owl stylesheet -->
+    <link href="Template/assets/OwlCarousel2-2.2.1/dist/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <!-- Default Theme -->
+    <link href="Template/assets/OwlCarousel2-2.2.1/dist/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+    <!-- style css -->
+    <link href="Template/assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- rtl style css -->
+    <link href="Template/assets/css/rtl-style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="home_seven boxed-layout" ng-app="myApp" ng-controller="HomeCtrl">
+    <!-- PAGE LOADER -->
+    <div class="se-pre-con"></div>
+    <!-- *** START PAGE HEADER SECTION *** -->
+    <header>
+        <!-- START HEADER TOP SECTION -->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+                        <!-- Start header social -->
+                        <div class="header-social">
+                            <ul>
+                                <li><a href="https://www.facebook.com/قلم-نيوز-988791414614962"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/kalmnews1"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://www.instagram.com/kalmnews"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCa0l4vqfGU-NyPkpXxgvleg?view_as=subscriber"><i class="fa fa-youtube-play"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- End of /. header social -->
+                    </div>
+                    <!-- Start header top right menu -->
+                    <div class="hidden-xs col-md-6 col-sm-6 col-lg-6" ng-hide="ControlPanelCase">
+                        <div class="header-right-menu">
+                            <ul>
+                                <li> <a href="" data-toggle="modal" data-target="#Login"><i class="fa fa-lock"></i>  تسجيل الدخول</a></li>
+                            </ul>
+                        </div>
+                    </div> <!-- end of /. header top right menu -->
+                </div> <!-- end of /. row -->
+            </div> <!-- end of /. container -->
+        </div>
+        <!-- END OF /. HEADER TOP SECTION -->
+        <!-- START MIDDLE SECTION -->
+        <div class="header-mid hidden-xs" ng-hide="ControlPanelCase">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="logo">
+                            <a href="/"><img src="Template/logo.png" class="img-responsive" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <br /><br />
+                        <span style="color: #eb0254; font-weight: bold; font-size: 20px">العراق اولاً</span>
+                        <!--<br />
+                        <span style="font-size:15px">رئيس التحرير : </span>
+                        <span style="color: #eb0254; font-weight: bold; font-size: 15px">مهدى جاسم</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END OF /. MIDDLE SECTION -->
+        <!-- START NAVIGATION -->
+        <nav class="navbar navbar-default navbar-sticky navbar-mobile bootsnav">
+            <!-- Start Top Search -->
+            <div class="top-search">
+                <div class="container">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                        <input type="text" ng-model="SearchKey" class="form-control" placeholder="Search" ng-enter="ChangeRoute('Search',null,null,SearchKey)">
+                        <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+            <div class="container">
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav" ng-hide="ControlPanelCase">
+                    <ul>
+                        <li class="search"><a href=""><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+                <!-- End Atribute Navigation -->
+                <!-- Start Header Navigation -->
+                <div class="navbar-header" ng-hide="ControlPanelCase">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i id="bars" class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand hidden-sm hidden-md hidden-lg" href="#brand"><img src="Template/logo.png" class="logo" alt=""></a>
+                </div>
+                <!-- End Header Navigation -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-left" data-in="" data-out="" ng-hide="ControlPanelCase">
+                        <li ng-class="Current.indexOf('Home') > -1?'active':'fake'">
+                            <a href="" ng-click="ChangeRoute('')">الصفحة الرئيسية</a>
+                        </li>
+                        <li class="dropdown" style="cursor:pointer">
+                            <a ng-style="ColorActiveNews" class="dropdown-toggle" data-toggle="dropdown">تصنيفات الأخبار</a>
+                            <ul class="dropdown-menu">
+                                <li ng-repeat="x in NewsCategories"><a href="" ng-click="ChangeRoute('Listing', x.ID)">{{x.Title}}</a></li>
+                            </ul>
+                        </li>
+                        <li ng-class="Current.indexOf('Research') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('Listing', 16)">بحوث و دراسات</a></li>
+                        <li ng-class="Current.indexOf('Report') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('Listing', 17)">مقالات و تقارير</a></li>
+                        <li ng-class="Current.indexOf('Images') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('Images')">معرض الصور</a></li>
+                        <li style="cursor:pointer" class="dropdown megamenu-fw hidden-xs">
+                            <a ng-style="ColorActiveVideos" ng-click="ChangeRoute('Videos')" class="dropdown-toggle" data-toggle="dropdown">الفيديوهات</a>
+                            <ul class="dropdown-menu megamenu-content" role="menu">
+                                <li>
+                                    <div class="row m_0">
+                                        <div class="col-menu-video col-md-3" ng-repeat="x in VideosMenu">
+                                            <a class="video-nav-item" href="" ng-click="ChangeRoute('Videos')">
+                                                <div class="img-wrapper">
+                                                    <img ng-src="{{x.Thumbnail}}" width="235" height="160" alt="" class="img-responsive">
+                                                    <div class="link-icon">
+                                                        <i class="ti-video-camera"></i>
+                                                    </div>
+                                                </div>
+                                                <h4>{{x.Title}}</h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li ng-class="Current.indexOf('About') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('About')">من نحن</a></li>
+                        <li ng-class="Current.indexOf('Contact') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('Contact')">إتصل بنا</a></li>
+                        <li ng-class="Current.indexOf('FAQ') > -1?'active':'fake'"><a href="" ng-click="ChangeRoute('FAQ')" ng-hide="true">الأسئلة الشائعة</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-left" data-in="" data-out="" ng-show="ControlPanelCase">
+                        <li><a href="/AdminContact">رسائل الإتصال</a></li>
+                        <li><a href="/AdminCategories">التصنيفات</a></li>
+                        <li><a href="/AdminItems">المحتوى</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+        <!-- END OF/. NAVIGATION -->
+    </header>
+    <!-- *** END OF /. PAGE HEADER SECTION *** -->
+    <div ng-view></div>
+    <!-- *** START SUB FOOTER *** -->
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <div class="copy">جميع حقوق الطبع محفوظة لدى قلم نيوز</div>
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7">
+                    <ul class="footer-nav">
+                        <li><a href="" ng-click="ChangeRoute('')">الصفحة الرئيسية</a></li>
+                        <li><a href="" ng-click="ChangeRoute('About')">من نحن</a></li>
+                        <li><a href="" ng-click="ChangeRoute('Contact')">إتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- *** END OF /. SUB FOOTER *** -->
+
+    <div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">من فضلك أدخل إسم المستخدم و كلمة المرور</h5>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    <form name="LoginForm" novalidate="">
+                        <input type="text" ng-model="LoginObject.Username" class="form-control" placeholder="إسم المستخدم" required="" ng-enter="Login()" />
+                        <br />
+                        <input type="password" ng-model="LoginObject.Password" class="form-control" placeholder="كلمة المرور" required="" ng-enter="Login()" />
+                        <br />
+                        <a class="btn btn-default submit" href="" ng-click="Login()">تسجيل الدخول</a>
+                        <br />
+                        <br />
+                        <span style="color:red" ng-show="Error">خطأ .. إسم المستخدم و كلمة المرور غير صحيح</span>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/sweetalert.min.js"></script>
+    <script src="Scripts/ui-bootstrap-tpls-1.1.2.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="Department/Admin/Admin.js"></script>
+    <script src="Department/Website/Website.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Template/assets/js/jquery.min.js"></script>
+    <!-- jquery ui js -->
+    <script src="Template/assets/js/jquery-ui.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Template/assets/js/bootstrap.min.js"></script>
+    <!-- Bootsnav js -->
+    <script src="Template/assets/bootsnav/js/bootsnav.js"></script>
+    <!-- theia sticky sidebar -->
+    <script src="Template/assets/js/theia-sticky-sidebar.js"></script>
+    <!-- Skycons js -->
+    <script src="Template/assets/js/skycons.js"></script>
+    <!-- youtube js -->
+    <script src="Template/assets/js/RYPP.js"></script>
+    <!-- owl include js plugin -->
+    <script src="Template/assets/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+    <!-- custom js -->
+    <script src="Template/assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Skyicon
+            var icons = new Skycons({ "color": "#fff" }),
+                    list = [
+                        "clear-day", "clear-night", "partly-cloudy-day",
+                        "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+                        "fog"
+                    ],
+                    i;
+
+            for (i = list.length; i--;)
+                icons.set(list[i], list[i]);
+
+            icons.play();
+        });
+    </script>
+
+</body>
+</html>

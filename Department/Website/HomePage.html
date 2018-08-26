@@ -1,0 +1,338 @@
+﻿<!-- *** START PAGE MAIN CONTENT *** -->
+<main class="page_main_wrapper">
+    <!-- START NEWSTRICKER -->
+    <div class="container">
+        <div class="newstricker_inner">
+            <div class="trending"><strong>خبر عاجل</strong></div>
+            <div id="NewsTicker-rtl" class="owl-carousel owl-theme">
+                <div class="item">
+                    <a style="font-weight:bold" href="" ng-click="ChangeRoute('Details',Urgent[0].CategoryID,Urgent[0].ID)">{{Urgent[0].Title}}</a>
+                </div>
+                <div class="item">
+                    <a style="font-weight:bold" href="" ng-click="ChangeRoute('Details',Urgent[1].CategoryID,Urgent[0].ID)">{{Urgent[0].Title}}</a>
+                </div>
+                <div class="item">
+                    <a style="font-weight:bold" href="" ng-click="ChangeRoute('Details',Urgent[2].CategoryID,Urgent[0].ID)">{{Urgent[0].Title}}</a>
+                </div>
+                <div class="item">
+                    <a style="font-weight:bold" href="" ng-click="ChangeRoute('Details',Urgent[3].CategoryID,Urgent[0].ID)">{{Urgent[0].Title}}</a>
+                </div>
+                <div class="item">
+                    <a style="font-weight:bold" href="" ng-click="ChangeRoute('Details',Urgent[4].CategoryID,Urgent[0].ID)">{{Urgent[0].Title}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  END OF /. NEWSTRICKER -->
+    <!-- START POST BLOCK SECTION -->
+    <section class="slider-inner">
+        <div class="container">
+            <div class="row thm-margin">
+                <div class="col-xs-12 col-sm-6 col-md-6 thm-padding">
+                    <div class="slider-wrapper">
+                        <div id="owl-slider-rtl" class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="slider-post post-height-1">
+                                    <a href="" ng-click="ChangeRoute('Details',HomeSlider[0].CategoryID,HomeSlider[0].ID)" class="news-image"><img width="520" height="460" ng-src="{{'Images/' + HomeSlider[0].Photo}}" alt="" class="img-responsive"></a>
+                                    <div class="post-text">
+                                        <span class="post-category">{{HomeSlider[0].CatTitle}}</span>
+                                        <h2><a href="" ng-click="ChangeRoute('Details',HomeSlider[0].CategoryID,HomeSlider[0].ID)">{{HomeSlider[0].Title}}</a></h2>
+                                        <ul class="authar-info">
+                                            <li class="date">{{HomeSlider[0].Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-post post-height-1">
+                                    <a href="" ng-click="ChangeRoute('Details',HomeSlider[1].CategoryID,HomeSlider[1].ID)" class="news-image"><img width="520" height="460" ng-src="{{'Images/' + HomeSlider[1].Photo}}" alt="" class="img-responsive"></a>
+                                    <div class="post-text">
+                                        <span class="post-category">{{HomeSlider[1].CatTitle}}</span>
+                                        <h2><a href="" ng-click="ChangeRoute('Details',HomeSlider[1].CategoryID,HomeSlider[1].ID)">{{HomeSlider[1].Title}}</a></h2>
+                                        <ul class="authar-info">
+                                            <li class="date">{{HomeSlider[1].Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-post post-height-1">
+                                    <a href="" ng-click="ChangeRoute('Details',HomeSlider[2].CategoryID,HomeSlider[2].ID)" class="news-image"><img width="520" height="460" ng-src="{{'Images/' + HomeSlider[2].Photo}}" alt="" class="img-responsive"></a>
+                                    <div class="post-text">
+                                        <span class="post-category">{{HomeSlider[2].CatTitle}}</span>
+                                        <h2><a href="" ng-click="ChangeRoute('Details',HomeSlider[2].CategoryID,HomeSlider[2].ID)">{{HomeSlider[2].Title}}</a></h2>
+                                        <ul class="authar-info">
+                                            <li class="date">{{HomeSlider[2].Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-post post-height-1">
+                                    <a href="" ng-click="ChangeRoute('Details',HomeSlider[3].CategoryID,HomeSlider[3].ID)" class="news-image"><img width="520" height="460" ng-src="{{'Images/' + HomeSlider[3].Photo}}" alt="" class="img-responsive"></a>
+                                    <div class="post-text">
+                                        <span class="post-category">{{HomeSlider[3].CatTitle}}</span>
+                                        <h2><a href="" ng-click="ChangeRoute('Details',HomeSlider[3].CategoryID,HomeSlider[3].ID)">{{HomeSlider[3].Title}}</a></h2>
+                                        <ul class="authar-info">
+                                            <li class="date">{{HomeSlider[3].Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-post post-height-1">
+                                    <a href="" ng-click="ChangeRoute('Details',HomeSlider[4].CategoryID,HomeSlider[4].ID)" class="news-image"><img width="520" height="460" ng-src="{{'Images/' + HomeSlider[4].Photo}}" alt="" class="img-responsive"></a>
+                                    <div class="post-text">
+                                        <span class="post-category">{{HomeSlider[4].CatTitle}}</span>
+                                        <h2><a href="" ng-click="ChangeRoute('Details',HomeSlider[4].CategoryID,HomeSlider[4].ID)">{{HomeSlider[4].Title}}</a></h2>
+                                        <ul class="authar-info">
+                                            <li class="date">{{HomeSlider[4].Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 thm-padding">
+                    <div class="row slider-right-post thm-margin">
+                        <div class="col-xs-6 col-sm-12 col-md-12 thm-padding hidden-xs">
+                            <div class="slider-post post-height-2">
+                                <a href="" ng-click="ChangeRoute('Details',HomeLeftSide[0].CategoryID,HomeLeftSide[0].ID)" class="news-image">
+                                    <img width="520" height="230" ng-src="{{'Images/' + HomeLeftSide[0].Photo}}" alt="" class="img-responsive">
+                                </a>
+                                <div class="post-text">
+                                    <span class="post-category">{{HomeLeftSide[0].CatTitle}}</span>
+                                    <h4><a href="" ng-click="ChangeRoute('Details',HomeLeftSide[0].CategoryID,HomeLeftSide[0].ID)">{{HomeLeftSide[0].Title}}</a></h4>
+                                    <ul class="authar-info">
+                                        <li class="hidden-xs">{{HomeLeftSide[0].Cdate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 thm-padding">
+                            <div class="slider-post post-height-2">
+                                <a href="" ng-click="ChangeRoute('Details',HomeLeftSide[1].CategoryID,HomeLeftSide[1].ID)" class="news-image"><img width="260" height="230" ng-src="{{'Images/' + HomeLeftSide[1].Photo}}" alt="" class="img-responsive"></a>
+                                <div class="post-text">
+                                    <span class="post-category">{{HomeLeftSide[1].CatTitle}}</span>
+                                    <h4><a href="" ng-click="ChangeRoute('Details',HomeLeftSide[1].CategoryID,HomeLeftSide[1].ID)">{{HomeLeftSide[1].Title}}</a></h4>
+                                    <ul class="authar-info">
+                                        <li class="hidden-xs">{{HomeLeftSide[1].Cdate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 thm-padding">
+                            <div class="slider-post post-height-2">
+                                <a href="" ng-click="ChangeRoute('Details',HomeLeftSide[2].CategoryID,HomeLeftSide[2].ID)" class="news-image"><img width="260" height="230" ng-src="{{'Images/' + HomeLeftSide[2].Photo}}" alt="" class="img-responsive"></a>
+                                <div class="post-text">
+                                    <span class="post-category">{{HomeLeftSide[2].CatTitle}}</span>
+                                    <h4><a href="" ng-click="ChangeRoute('Details',HomeLeftSide[2].CategoryID,HomeLeftSide[2].ID)">{{HomeLeftSide[2].Title}}</a></h4>
+                                    <ul class="authar-info">
+                                        <li class="hidden-xs">{{HomeLeftSide[2].Cdate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END OF /. POST BLOCK SECTION -->
+    <div class="container">
+        <div class="row row-m">
+            <!-- START MAIN CONTENT -->
+            <div class="col-sm-8 col-p main-content">
+                <!--<div class="theiaStickySidebar">--><div>
+                    <!-- START ADVERTISEMENT
+                    <div class="add-inner">
+                        <img src="Template/assets/images/add728x90-1.jpg" class="img-responsive" alt="">
+                    </div>
+                    END OF /. ADVERTISEMENT -->
+                    <!-- START POST CATEGORY STYLE FOUR (Latest articles ) -->
+                    <div class="post-inner">
+                        <!--post header-->
+                        <div class="post-head">
+                            <h2 class="title"><strong>أهم الأخبار</strong></h2>
+                        </div>
+                        <!-- post body -->
+                        <div class="post-body">
+                            <div class="news-list-item articles-list" ng-repeat="x in Important">
+                                <div class="img-wrapper">
+                                    <a href="" class="thumb" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)"><img ng-src="{{'Images/' + x.Photo}}" width="218" height="150" alt="" class="img-responsive"></a>
+                                </div>
+                                <div class="post-info-2">
+                                    <h4><a href="" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)" class="title">{{x.Title}}</a></h4>
+                                    <ul class="authar-info">
+                                        <li><i class="ti-timer"></i>{{x.Cdate}}</li>
+                                    </ul>
+                                    <p class="hidden-sm">{{x.ItemContent.substring(0,330) + '...'}}</p>
+                                </div>
+                            </div>
+                        </div> <!-- /. post body -->
+                    </div>
+                    <!-- END OF /. POST CATEGORY STYLE FOUR (Latest articles ) -->
+                </div>
+            </div>
+            <!-- END OF /. MAIN CONTENT -->
+            <!-- START SIDE CONTENT -->
+            <div class="col-sm-4 col-p leftSidebar">
+                <!--<div class="theiaStickySidebar">--><div>
+                    <!-- START LATEST REVIEWS -->
+                    <div class="panel_inner review-inner">
+                        <div class="panel_header">
+                            <h4><strong>الأخبار الأكثر شهرة</strong></h4>
+                        </div>
+                        <div class="panel_body">
+                            <div class="more-post">
+                                <a href="" ng-click="ChangeRoute('Details',PopularObject.CategoryID,PopularObject.ID)" class="news-image"><img ng-src="{{'Images/' + PopularObject.Photo}}" width="340" height="215" alt="" class="img-responsive"></a>
+                                <div class="reatting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="post-text">
+                                    <span class="post-category">{{PopularObject.CatTitle}}</span>
+                                    <h4>{{PopularObject.Title}}</h4>
+                                    <ul class="authar-info">
+                                        <li><i class="ti-timer"></i>{{PopularObject.Cdate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="news-list">
+                                <div class="news-list-item" ng-repeat="x in Popular">
+                                    <div class="img-wrapper">
+                                        <a href="" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)" class="thumb">
+                                            <img ng-src="{{'Images/' + x.Photo}}" width="115" height="85" alt="" class="img-responsive">
+                                            <div class="link-icon">
+                                                <i class="fa fa-camera"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="post-info-2">
+                                        <h5><a href="" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)" class="title">{{x.Title}}</a></h5>
+                                        <div class="reviews-reatting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF /. LATEST REVIEWS -->
+                </div>
+                <br />
+                <!--<div class="theiaStickySidebar">--><div>
+                    <!-- START SOCIAL ICON -->
+                    <div class="social-media-inner">
+                        <ul class="social-media clearfix">
+                            <li>
+                                <a href="#" class="rss">
+                                    <i class="fa fa-rss"></i>
+                                    <div>2,035</div>
+                                    <p>Subscribers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fb">
+                                    <i class="fa fa-facebook"></i>
+                                    <div>3,794</div>
+                                    <p>Fans</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="g_plus">
+                                    <i class="fa fa-google-plus"></i>
+                                    <div>941</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="you_tube">
+                                    <i class="fa fa-youtube-play"></i>
+                                    <div>7,820</div>
+                                    <p>Subscribers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                    <div>1,562</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pint">
+                                    <i class="fa fa-pinterest"></i>
+                                    <div>1,310</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                        </ul> <!-- /.social icon -->
+                    </div>
+                    <!-- END OF /. SOCIAL ICON -->
+                    <!-- START CATEGORIES WIDGET -->
+                    <div class="panel_inner categories-widget">
+                        <div class="panel_header">
+                            <h4><strong>تصنيفات الأخبار</strong></h4>
+                        </div>
+                        <div class="panel_body">
+                            <ul class="category-list">
+                                <li ng-repeat="x in NewsCategories"><a href="" ng-click="ChangeRoute('Listing', x.ID)">{{x.Title}}<span>{{x.ItemsCount}}</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- END OF /. CATEGORIES WIDGET -->
+                    <!-- START TAGS -->
+                    <div class="panel_inner">
+                        <div class="panel_header">
+                            <h4><strong>الكلمات الدلالية</strong></h4>
+                        </div>
+                        <div class="panel_body">
+                            <div class="tags-inner">
+                                <a ng-click="ChangeRoute('Search',null,null,x.DATA)" class="ui tag" ng-repeat="x in Tags" style="margin-left:20px">{{x.DATA}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF /. TAGS -->
+                </div>
+            </div>
+            <!-- END OF /. SIDE CONTENT -->
+        </div>
+    </div>
+</main>
+<!-- *** END OF /. PAGE MAIN CONTENT *** -->
+<!-- theia sticky sidebar -->
+<script src="Template/assets/js/theia-sticky-sidebar.js"></script>
+<!-- Skycons js -->
+<script src="Template/assets/js/skycons.js"></script>
+<!-- youtube js -->
+<script src="Template/assets/js/RYPP.js"></script>
+<!-- owl include js plugin -->
+<script src="Template/assets/OwlCarousel2-2.2.1/owl.carousel.min.js"></script>
+<!-- custom js -->
+<script src="Template/assets/js/custom.js"></script>
+<script>
+    $(document).ready(function () {
+        //Skyicon
+        var icons = new Skycons({ "color": "#fff" }),
+                list = [
+                    "clear-day", "clear-night", "partly-cloudy-day",
+                    "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+                    "fog"
+                ],
+                i;
+
+        for (i = list.length; i--;)
+            icons.set(list[i], list[i]);
+
+        icons.play();
+    });
+</script>

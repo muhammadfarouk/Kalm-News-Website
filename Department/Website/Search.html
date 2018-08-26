@@ -1,0 +1,159 @@
+﻿<br />
+<!-- *** START PAGE MAIN CONTENT *** -->
+<main class="page_main_wrapper">
+    <div class="container">
+        <div class="row row-m">
+            <!-- START MAIN CONTENT -->
+            <div class="col-sm-8 col-p  main-content">
+                <div class="theiaStickySidebar">
+                    <div class="post-inner">
+                        <div class="post-body" style="padding-top:0px !important">
+                            <div class="news-list-item articles-list" ng-repeat="x in List" style="padding:0 !important">
+                                <div class="img-wrapper">
+                                    <article>
+                                        <figure>
+                                            <a href="" ng-click="Details(x.ID)" class="thumb"><img src="{{'Images/' + x.Photo}}" alt="" class="img-responsive"></a>
+                                            <span class="post-category ng-binding">{{x.CatTitle}}</span>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="post-info-2">
+                                    <h4><a href="" ng-click="Details(x.ID)" class="title">{{x.Title}}</a></h4>
+                                    <ul class="authar-info">
+                                        <li><i class="ti-timer"></i> {{x.Cdate}}</li>
+                                    </ul>
+                                    <p class="hidden-sm">{{x.ItemContent.substring(0, 250) + '...'}}</p>
+                                </div>
+                            </div>
+                        </div> <!-- /. post body -->
+                        <!-- Post footer -->
+                        <div class="post-footer" style="text-align:center" ng-show="totalItems > 10">
+                            <div class="row thm-margin">
+                                <div class="col-xs-12 col-sm-12 col-md-12 thm-padding">
+                                    <uib-pagination ng-model="CurrentPage"
+                                                    ng-change="Search(CurrentPage)"
+                                                    items-per-page="PageSize"
+                                                    total-items="totalItems"
+                                                    max-size="5"
+                                                    class="pagination"
+                                                    next-text="<"
+                                                    previous-text=">"
+                                                    last-text="<<"
+                                                    first-text=">>"
+                                                    force-ellipses="true"
+                                                    boundary-links="true"
+                                                    rotate="false">
+                                    </uib-pagination>
+                                </div>
+                            </div>
+                        </div> <!-- /.Post footer-->
+                    </div>
+                </div>
+            </div>
+            <!-- END OF /. MAIN CONTENT -->
+            <!-- START SIDE CONTENT -->
+            <div class="col-sm-4 col-p leftSidebar" style="margin-top:20px">
+                <div class="theiaStickySidebar">
+                    <!-- START SOCIAL ICON -->
+                    <div class="social-media-inner">
+                        <ul class="social-media clearfix">
+                            <li>
+                                <a href="#" class="rss">
+                                    <i class="fa fa-rss"></i>
+                                    <div>2,035</div>
+                                    <p>Subscribers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fb">
+                                    <i class="fa fa-facebook"></i>
+                                    <div>3,794</div>
+                                    <p>Fans</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="g_plus">
+                                    <i class="fa fa-google-plus"></i>
+                                    <div>941</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="you_tube">
+                                    <i class="fa fa-youtube-play"></i>
+                                    <div>7,820</div>
+                                    <p>Subscribers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                    <div>1,562</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="pint">
+                                    <i class="fa fa-pinterest"></i>
+                                    <div>1,310</div>
+                                    <p>Followers</p>
+                                </a>
+                            </li>
+                        </ul> <!-- /.social icon -->
+                    </div>
+                    <!-- END OF /. SOCIAL ICON -->
+                    <!-- START LATEST REVIEWS -->
+                    <div class="panel_inner review-inner">
+                        <div class="panel_header">
+                            <h4><strong>الأخبار الأكثر شهرة</strong></h4>
+                        </div>
+                        <div class="panel_body">
+                            <div class="more-post">
+                                <a href="" ng-click="ChangeRoute('Details',PopularTop[0].CategoryID,PopularTop[0].ID)" class="news-image"><img ng-src="{{'Images/' + PopularTop[0].Photo}}" width="340" height="215" alt="" class="img-responsive"></a>
+                                <div class="reatting">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="post-text">
+                                    <span class="post-category">{{PopularTop[0].CatTitle}}</span>
+                                    <h4>{{PopularTop[0].Title}}</h4>
+                                    <ul class="authar-info">
+                                        <li><i class="ti-timer"></i>{{PopularTop[0].Cdate}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="news-list">
+                                <div class="news-list-item" ng-repeat="x in PopularBottom">
+                                    <div class="img-wrapper">
+                                        <a href="" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)" class="thumb">
+                                            <img ng-src="{{'Images/' + x.Photo}}" width="115" height="85" alt="" class="img-responsive">
+                                            <div class="link-icon">
+                                                <i class="fa fa-camera"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="post-info-2">
+                                        <h5><a href="" ng-click="ChangeRoute('Details',x.CategoryID,x.ID)" class="title">{{x.Title}}</a></h5>
+                                        <div class="reviews-reatting">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF /. LATEST REVIEWS -->
+                </div>
+            </div>
+            <!-- END OF /. SIDE CONTENT -->
+        </div>
+    </div>
+</main>
+<!-- *** END OF /. PAGE MAIN CONTENT *** -->

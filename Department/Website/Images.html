@@ -1,0 +1,67 @@
+﻿<br />
+<!-- *** START PAGE MAIN CONTENT *** -->
+<main class="page_main_wrapper">
+    <div class="container">
+        <div class="row row-m">
+            <!-- START MAIN CONTENT -->
+            <div class="col-sm-12 col-p  main-content">
+                <div class="theiaStickySidebar">
+                    <!-- START CARD POST -->
+                    <div class="row row-m">
+                        <div class="col-sm-4 col-p" ng-repeat="x in List">
+                            <div class="posts card-post">
+                                <div class="post-grid post-grid-item">
+                                    <figure class="posts-thumb">
+                                        <span class="post-category">{{x.CatTitle}}</span>
+                                        <a href="" ng-click="Show(x.Title, 'Images/' + x.Photo)" data-toggle="modal" data-target="#Preview"><img ng-src="{{'Images/' + x.Photo}}" alt=""></a>
+                                    </figure>
+                                    <div class="posts-inner">
+                                        <a href="" ng-click="Show(x.Title, 'Images/' + x.Photo)" data-toggle="modal" data-target="#Preview" class="posts-link"></a>
+                                        <h6 class="posts-title"><a href="" ng-click="Show(x.Title, 'Images/' + x.Photo)" data-toggle="modal" data-target="#Preview">{{x.Title.substring(0,30) + '...'}}</a></h6>
+                                        <ul class="authar-info">
+                                            <li><i class="ti-timer"></i> {{x.Cdate}}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center">
+                        <uib-pagination ng-model="CurrentPage"
+                                        ng-change="Search(CurrentPage)"
+                                        items-per-page="PageSize"
+                                        total-items="totalItems"
+                                        max-size="5"
+                                        class="pagination"
+                                        next-text="<"
+                                        previous-text=">"
+                                        last-text="<<"
+                                        first-text=">>"
+                                        force-ellipses="true"
+                                        boundary-links="true"
+                                        rotate="false">
+                        </uib-pagination>
+                    </div>
+                    <!-- END OF /. CARD POST -->
+                </div>
+            </div>
+            <!-- END OF /. MAIN CONTENT -->
+        </div>
+    </div>
+</main>
+<!-- *** END OF /. PAGE MAIN CONTENT *** -->
+<div class="modal fade" id="Preview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">{{CurrentTitle}}</h5>
+            </div>
+            <div class="modal-body" style="text-align:center">
+                <img ng-src="{{CurrentPhoto}}" alt="" width="550">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>

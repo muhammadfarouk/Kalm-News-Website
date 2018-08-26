@@ -1,0 +1,178 @@
+﻿<div class="container">
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="x_panel" style="border: 1px #f5f3f3 solid; padding: 10px">
+                <div class="x_title">
+                    <h2>إضافة و تعديل <small>من هنا يمكنك إضافة و تعديل محتوى</small></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form class="form-horizontal form-label-left input_mask" name="FormMain" novalidate accessible-form>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                العنوان
+                                <span style="color: red" ng-show="FormMain.Title.$error.required">*</span>
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="Object.Title" required name="Title">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                المحتوى
+                                <span style="color: red" ng-show="FormMain.Content.$error.required">*</span>
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <textarea rows="12" class="form-control" ng-model="Object.ItemContent" required name="Content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                الكلمات الدلالية
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="Object.Tags" placeholder="مثال : مصر-العرق-الحكومة">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                الترتيب
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="Object.ViewOrder">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                رابط الفيديو للصورة
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="Object.Video">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                رابط الفيديو للعرض
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="Object.VideoEmbed">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                التصنيف
+                                <span style="color: red" ng-show="FormMain.LookupTypeID.$error.required">*</span>
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <select class="form-control" ng-model="Object.CategoryID" ng-options="item.ID as item.Title for item in Categories"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                الصورة
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="file" file-model="AttFile" name="AttFile" ng-model="AttFile" accept=".jpg" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                إختيارات
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="checkbox" ng-model="Object.Urgent" />  خبر عاجل
+                                <br />
+                                <input type="checkbox" ng-model="Object.Popular" />  الأكثر شهرة
+                                <br />
+                                <input type="checkbox" ng-model="Object.HomeSlider" />  الصور المتقلبة
+                                <br />
+                                <input type="checkbox" ng-model="Object.HomeLeftSide" />  الصور الرئيسية
+                                <br />
+                                <input type="checkbox" ng-model="Object.HomeView" />  تظهر بالصفحة الرئيسية
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="form-group" style="text-align: center">
+                            <button type="submit" class="btn btn-success" ng-click="AddEdit()">حفظ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br />
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="x_panel" style="border: 1px #f5f3f3 solid; padding: 10px">
+                <div class="x_title">
+                    <h2>المحتويات <small>مرتبة حسب التاريخ الأحدث</small></h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <form class="form-horizontal form-label-left input_mask" name="FormSearch" novalidate>
+                        <br />
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">
+                                العنوان
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" ng-model="ObjectSearch.Title" ng-change="Search(1)">
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                    </form>
+                    <br />
+                    <div class="x_content" ng-show="List.length!=0">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr style="background-color:#007bb7;color:white">
+                                    <td>العنوان</td>
+                                    <td>التاريخ</td>
+                                    <td>الخيارات</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="x in List">
+                                    <td>{{x.Title}}</td>
+                                    <td>{{x.Cdate}}</td>
+                                    <td style="text-align:center">
+                                        <a href="" ng-click="View(x.ID)"><span class="label label-info">تعديل</span></a>
+                                        <a href="" ng-click="Delete(x.ID)"><span class="label label-danger">حذف</span></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <div class="col-md-12" style="text-align:center">
+                            <uib-pagination ng-model="CurrentPage"
+                                            ng-change="Search(CurrentPage)"
+                                            items-per-page="PageSize"
+                                            total-items="totalItems"
+                                            max-size="5"
+                                            class="pagination"
+                                            next-text="<"
+                                            previous-text=">"
+                                            last-text="<<"
+                                            first-text=">>"
+                                            force-ellipses="true"
+                                            boundary-links="true"
+                                            rotate="false">
+                            </uib-pagination>
+                            <br />
+                            <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">صفحة {{CurrentPage}} من {{totalPages}} صفحة</div>
+                            <br />
+                        </div>
+                    </div>
+                    <div class="x_content" ng-show="List.length==0">
+                        <div class="alert alert-info alert-dismissible fade in" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <strong>عفوا !</strong> لا يوجد نتائج مطابقة للبحث.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
